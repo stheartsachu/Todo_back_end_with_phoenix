@@ -14,16 +14,18 @@ defmodule TodoappWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", TodoappWeb do
-    pipe_through :browser
+  # scope "/", TodoappWeb do
+  #   pipe_through :browser
 
-    get "/", PageController, :index
-  end
+  #   get "/", PageController, :index
+  # end
 
   # Other scopes may use custom stacks.
-  # scope "/api", TodoappWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", TodoappWeb do
+    pipe_through :api
+
+    resources "/todos", TodoController
+  end
 
   # Enables LiveDashboard only for development
   #

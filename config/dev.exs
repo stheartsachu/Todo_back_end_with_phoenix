@@ -3,8 +3,8 @@ import Config
 # Configure your database
 config :todoapp, Todoapp.Repo,
   username: "postgres",
-  password: "root",
-  database: "todoapp_dev",
+  password: "postgres",
+  database: "todoapp_main_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

@@ -7,8 +7,8 @@ import Config
 # Run `mix help test` for more information.
 config :todoapp, Todoapp.Repo,
   username: "postgres",
-  password: "root",
-  database: "todoapp_test#{System.get_env("MIX_TEST_PARTITION")}",
+  password: "postgres",
+  database: "todoapp_main_test#{System.get_env("MIX_TEST_PARTITION")}",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
